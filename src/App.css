@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background: #F2f2f2;
+}
+
+header {
+  background: #4A90E2;
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  height: 64px;
+}
+
+header img{
+  margin: 20px 42px;
+  width: 120.92px;
+  height: 23.93px;
+}
+
+header div.side-right {
+  display: flex;
+  align-items: center;
+  margin: 23px 68px 24px 0;
+  color: #FFF;
+}
+
+div.side-right > span {
+  font-family: 'Aclonica', Arial, Helvetica, sans-serif;
+  width: 84px;
+  height: 17px;
+  font-size: 15px;
+}
+
+
