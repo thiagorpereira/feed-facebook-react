@@ -5,7 +5,7 @@ function Header(){
     <header>
       <img src="https://i.imgur.com/KDIDiSE.png" alt="Facebook"/>
       <div className="side-right">
-        <span>Meu perfiiil</span>
+        <span>Meu perfil</span>
         <i className="material-icons">account_circle</i>
       </div>
     </header>

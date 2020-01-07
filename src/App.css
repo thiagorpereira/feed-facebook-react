@@ -34,6 +34,7 @@ header div.side-right {
   align-items: center;
   margin: 23px 68px 24px 0;
   color: #FFF;
+  font-weight: bold;
 }
 
 div.side-right > span {

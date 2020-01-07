@@ -1,46 +1,40 @@
 import React from 'react';
 
-function PostHeader(){
+function PostHeader({ author, date }){
   return(
     <div className="post-header">    
-      <img className="avatar" src="https://i.pravatar.cc/150?img=1" alt="Avatar"/>
+      <img className="avatar" src={author.avatar} alt="Avatar"/>
       <div className="info">
-        <span>Thiago Pereira</span>
-        <p>04 jun 2019</p>
+        <span>{author.name}</span>
+        <p>{date}</p>
       </div>
     </div>
   );
 }
 
-function PostComments(){
+function PostComments({comments}){
   return (
     <div className="post-comments">
       <div className="divider"/>
-      <div className="comment">
-        <img className="avatar-comment" src="https://i.pravatar.cc/150?img=1" alt="Avatar"/>
-        <p>
-          <span>James</span> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div>
+      {comments.map(comment => (
+        <div key={comment.id} className="comment">
+          <img className="avatar-comment" src={comment.author.avatar} alt="Avatar"/>
+          <p>
+            <span>{comment.author.name}</span> {comment.content}
+          </p>
+        </div>
+      ))}
     </div>
   )
 }
 
-function PostItem(){
+function PostItem({ author, date, content, comments}){
   return(
-    <>
     <div className="post">
-      <PostHeader/>
-      <p className="post-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      <PostComments/>
+      <PostHeader author={author} date={date} />
+      <p className="post-content">{content}</p>
+      <PostComments comments={comments}/>
     </div>
-    <div className="post">
-        <PostHeader/>
-        <p className="post-content">some publish hereee</p>
-        <PostComments/>
-        <PostComments/>
-      </div>
-   </> 
   )
 }
 
