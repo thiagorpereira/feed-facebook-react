@@ -15,3 +15,5 @@
 ```
   yarn dev
 ```
+
+ Abrir no navegador: http://localhost:8080/
